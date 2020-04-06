@@ -1,6 +1,13 @@
 Step to use API
 
 1.http://localhost:8080/authenticate
+
+Request Body:
+{
+	"username":"vibhor",
+	"password":"password"
+}
+
 //Get the token from 1st request and use the same token for other API
 
 
