@@ -1,0 +1,64 @@
+Step to use API
+
+1.http://localhost:8080/authenticate
+//Get the token from 1st request and use the same token for other API
+
+
+2.http://localhost:8080/saveProduct
+Method : Post
+Header Detail:
+Content-Type:application/json
+Authorization:Bearer <Generated token>	
+
+Request Body
+[{
+	"productType":"Shirt",
+	"color":"Red",
+	"size":"38",
+	"price":"200",
+	"currency":"INR",
+	"brand":"Zara",
+	"sku":"ZA-SHRT-38-RD",
+	"supplierId":"2929-JKL-$5"
+	
+	},
+	{
+	"productType":"Shirt",
+	"color":"Red",
+	"size":"40",
+	"price":"200",
+	"currency":"INR",
+	"brand":"Zara",
+	"sku":"ZA-SHRT-40-RD",
+	"supplierId":"2929-JKL-$5"
+	
+	},
+	{
+	"productType":"T-Shirt",
+	"color":"Red",
+	"size":"38",
+	"price":"200",
+	"currency":"INR",
+	"brand":"Zara",
+	"sku":"ZA-TSHRT-38-RD",
+	"supplierId":"2929-JKL-$5"
+	
+	},
+	{
+	"productType":"T-Shirt",
+	"color":"Red",
+	"size":"40",
+	"price":"200",
+	"currency":"INR",
+	"brand":"Zara",
+	"sku":"ZA-TSHRT-40-RD",
+	"supplierId":"2929-JKL-$5"
+	
+	}
+	
+	]
+
+3. http://localhost:8080/getBySku/ZA-SHRT-38-RD
+Method:GET
+Content-Type:application/json
+Authorization:Bearer <Generated token>	
